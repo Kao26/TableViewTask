@@ -12,19 +12,49 @@ class TableViewController: UITableViewController {
     
     //空の配列を作成
     var names: [String] = []
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //処理を委任するselfは上のクラスを意味する
+        tableView.delegate = self
+        
         //リストに追加した内容を取得する
-        //ADDCONTroller...のところで　UserDefaults.standard.set( contents, forKey: "List" ) と保存している
-        //これを存在チェックをした後で取り出す
+        //listはテキストで打った内容
+        //これを存在チェックをした後で取り出す(入力確認)
         if UserDefaults.standard.object(forKey: "List") != nil {
             names = UserDefaults.standard.object(forKey: "List") as! [String]
+            //チェック
+            print("取り出し:\(names)")
+            
         }
-
         
     }
+    
+    
+    
+    
+    //画面遷移時に行われる処理を書いてみるーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+    //画面が表示される直前に表示
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UserDefaults.standard.object(forKey: "List") != nil {
+        names = UserDefaults.standard.object(forKey: "List") as! [String]
+        //チェック
+        print("画面遷移:\(names)")
+        
+        //リロードを入れてみるーーーーーーーーーーーーーーーー
+        tableView.reloadData()
+          
+ 
+        }
+     
+    }
+ 
+    
+    
+ 
     
     //こっから消すやつーーーーーーーーーーーーーーーー
     //セルの編集許可
@@ -33,12 +63,20 @@ class TableViewController: UITableViewController {
         return true
     }
     
-    //スワイプしたセルを削除　※arrayNameは変数名に変更してください
+    //スワイプしたセルを削除
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             names.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
+        
+        
+        
+        //ListDataに保存してみるぞおおおおおお
+        //セルを削除したらすぐ保存ってこと
+        UserDefaults.standard.set( names, forKey: "List" )
+  
+        
     }
     //ここまで消すやつーーーーーーーーーーーーーーーーーーーーーーーー
 
@@ -67,6 +105,9 @@ class TableViewController: UITableViewController {
     //この中で表示内容を設定するプログラムを記述する
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+        
+        
         //セルのオブジェクトを作成
         // "NameCell" の部分はStoryboardでセルに設定したIdentifierを指定しています。
         let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
@@ -79,9 +120,12 @@ class TableViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        names.reloadData()
+    }
+ */
 
    
 }

@@ -14,33 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     //リストの内容を入れるための変数
-    var ListData: String?
+//    var ListData: String?
     
     //入力した内容を入れるための変数
-    var TextData: String?
+//    var TextData: String?
 
 
+    
+    // アプリが起動完了した時に呼ばれる処理ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // アプリが起動完了した時に呼ばれる処理
-        
         // アプリに保存されている最後のリスト内容を読み込み、lastTextに格納します。
         //テキストに打ち込んだ内容を保存し、TextDataに保存する
-        let userDefaults = UserDefaults.standard
-        ListData = userDefaults.object(forKey: "NameList") as? String
-        TextData = userDefaults.object(forKey: "List") as? String
+//        let userDefaults = UserDefaults.standard
+//        //ListData = userDefaults.object(forKey: "NameList") as? String
+//        TextData = userDefaults.object(forKey: "List") as? String//[]
         
         return true
     }
 
+    
+    // アプリが閉じそうな時に呼ばれる処理ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     func applicationWillResignActive(_ application: UIApplication) {
-        // アプリが閉じそうな時に呼ばれる
-        
-         // ListData,TextDataに格納されている入力内容をアプリに保存します。
-        
-        let userDefaults = UserDefaults.standard
-        
-        userDefaults.set(ListData, forKey: "NameList")
-        userDefaults.set(TextData, forKey: "List")
+        // ListData,TextDataに格納されている入力内容をアプリに保存します。
+//        let userDefaults = UserDefaults.standard
+//        //userDefaults.set(ListData, forKey: "NameList")
+//        userDefaults.set(TextData, forKey: "List")
         
     }
 
@@ -59,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // フリックしてアプリを閉じた時に呼ばれる
+
     }
 
 

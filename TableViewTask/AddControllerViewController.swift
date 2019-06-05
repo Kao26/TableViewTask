@@ -15,6 +15,21 @@ class AddControllerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        //画面が読み込まれた時に保存されていた配列の中身を取り出すーーーーーーーーーーーーーーーーーーーーーー
+        //いい感じに動いてよかったぁぁぁ
+        
+        if UserDefaults.standard.object(forKey: "List") != nil {
+            
+            contents = UserDefaults.standard.object(forKey: "List") as! [String]
+            
+        }
+        
+ 
+        //チェック
+        print("viewDidload:\(contents)")
 
         // Do any additional setup after loading the view.
     }
@@ -27,16 +42,16 @@ class AddControllerViewController: UIViewController {
         //変数に入力内容を入れる
         contents.append(TextField.text!)
         
+        
+        //チェック
+        print("AddButtonした時:\(contents)")
+
         //追加後テキストフィールドをからにする
         TextField.text = ""
         
         //変数の中身をUserDefaultに保存しておく
         //保存場所の名前が"List"
-        UserDefaults.standard.set( contents, forKey: "List" )
-        
-        
-        
-        
+        UserDefaults.standard.set( contents, forKey: "List" )// ->["List":[aaa, bbb, ccc]]
         
     }
     
