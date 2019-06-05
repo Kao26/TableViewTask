@@ -106,8 +106,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        
-        
         //セルのオブジェクトを作成
         // "NameCell" の部分はStoryboardでセルに設定したIdentifierを指定しています。
         let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)

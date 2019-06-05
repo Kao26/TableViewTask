@@ -14,6 +14,10 @@
 		32007FF022A5FD66004C24DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32007FEE22A5FD66004C24DD /* LaunchScreen.storyboard */; };
 		32007FF822A5FEF1004C24DD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32007FF722A5FEF1004C24DD /* TableViewController.swift */; };
 		32007FFC22A63426004C24DD /* AddControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32007FFB22A63426004C24DD /* AddControllerViewController.swift */; };
+		32CBA79E22A7F52C0015B624 /* TableViewControllerRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBA79D22A7F52C0015B624 /* TableViewControllerRow2.swift */; };
+		32CBA7A222A7F5CD0015B624 /* AddControllerViewControllerRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBA7A122A7F5CC0015B624 /* AddControllerViewControllerRow2.swift */; };
+		32CBA7A422A804B40015B624 /* TableViewControllerRow3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBA7A322A804B40015B624 /* TableViewControllerRow3.swift */; };
+		32CBA7A622A804EA0015B624 /* AddControllerViewControllerRow3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBA7A522A804EA0015B624 /* AddControllerViewControllerRow3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		32007FF122A5FD66004C24DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32007FF722A5FEF1004C24DD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		32007FFB22A63426004C24DD /* AddControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddControllerViewController.swift; sourceTree = "<group>"; };
+		32CBA79D22A7F52C0015B624 /* TableViewControllerRow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerRow2.swift; sourceTree = "<group>"; };
+		32CBA7A122A7F5CC0015B624 /* AddControllerViewControllerRow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddControllerViewControllerRow2.swift; sourceTree = "<group>"; };
+		32CBA7A322A804B40015B624 /* TableViewControllerRow3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerRow3.swift; sourceTree = "<group>"; };
+		32CBA7A522A804EA0015B624 /* AddControllerViewControllerRow3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddControllerViewControllerRow3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 		32007FE422A5FD64004C24DD /* TableViewTask */ = {
 			isa = PBXGroup;
 			children = (
-				32007FE522A5FD64004C24DD /* AppDelegate.swift */,
 				32007FE722A5FD64004C24DD /* ViewController.swift */,
+				32007FE522A5FD64004C24DD /* AppDelegate.swift */,
+				32007FE922A5FD64004C24DD /* Main.storyboard */,
 				32007FF722A5FEF1004C24DD /* TableViewController.swift */,
 				32007FFB22A63426004C24DD /* AddControllerViewController.swift */,
-				32007FE922A5FD64004C24DD /* Main.storyboard */,
+				32CBA79D22A7F52C0015B624 /* TableViewControllerRow2.swift */,
+				32CBA7A122A7F5CC0015B624 /* AddControllerViewControllerRow2.swift */,
+				32CBA7A322A804B40015B624 /* TableViewControllerRow3.swift */,
+				32CBA7A522A804EA0015B624 /* AddControllerViewControllerRow3.swift */,
 				32007FEC22A5FD66004C24DD /* Assets.xcassets */,
 				32007FEE22A5FD66004C24DD /* LaunchScreen.storyboard */,
 				32007FF122A5FD66004C24DD /* Info.plist */,
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32CBA7A222A7F5CD0015B624 /* AddControllerViewControllerRow2.swift in Sources */,
 				32007FFC22A63426004C24DD /* AddControllerViewController.swift in Sources */,
+				32CBA7A422A804B40015B624 /* TableViewControllerRow3.swift in Sources */,
 				32007FE822A5FD64004C24DD /* ViewController.swift in Sources */,
 				32007FF822A5FEF1004C24DD /* TableViewController.swift in Sources */,
 				32007FE622A5FD64004C24DD /* AppDelegate.swift in Sources */,
+				32CBA79E22A7F52C0015B624 /* TableViewControllerRow2.swift in Sources */,
+				32CBA7A622A804EA0015B624 /* AddControllerViewControllerRow3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
